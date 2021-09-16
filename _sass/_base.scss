@@ -92,9 +92,11 @@ blockquote {
 
 .navbar {
   box-shadow: none;
-  border-bottom: 1px solid $grey-color-light;
+  border-bottom: 1px solid transparent;
   // border-bottom: linear-gradient(to right, red purple);
+  border-image: linear-gradient(to right, red, purple);
   background-color: var(--global-bg-color);
+  border-image-slice: 0 0 1 0;
   // background: linear-gradient(to right, red, purple);
   opacity: 0.95;
 }
