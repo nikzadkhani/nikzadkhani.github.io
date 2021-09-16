@@ -3,12 +3,12 @@ name: Deploy
 on:
   push:
     branches:
-      - master
       - main
+      - master
   pull_request:
     branches:
-      - master
       - main
+      - master
 
 jobs:
   deploy:
