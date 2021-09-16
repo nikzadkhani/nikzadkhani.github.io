@@ -27,7 +27,7 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
-    faraday (1.7.1)
+    faraday (1.7.2)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
       faraday-excon (~> 1.1)
@@ -107,6 +107,10 @@ GEM
     minitest (5.14.4)
     multipart-post (2.1.1)
     namae (1.1.1)
+    nokogiri (1.12.4-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.12.4-x86_64-darwin)
+      racc (~> 1.4)
     nokogiri (1.12.4-x86_64-linux)
       racc (~> 1.4)
     octokit (4.21.0)
@@ -132,12 +136,13 @@ GEM
       unicode-display_width (~> 1.1, >= 1.1.1)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
-    unicode-display_width (1.7.0)
+    unicode-display_width (1.8.0)
     unicode_utils (1.4.0)
     webrick (1.7.0)
     zeitwerk (2.4.2)
 
 PLATFORMS
+  universal-darwin-20
   x86_64-linux
 
 DEPENDENCIES

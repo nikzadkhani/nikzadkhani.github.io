@@ -1,0 +1,6 @@
+I"Ý<h2 id="intuition">Intuition</h2>
+<p>The main goal of q-learning and really a lot of other reinforcement learning algorithms is to learn an optimal policy which is
+usually symbolized as $\pi$. This boils down to finding the action in every scenario that will give us the best outcome. The
+policy that does this the best is called the optimal policy which is usually symbolized as $\pi^*$. Q-learning is in algorithm
+to find this policy using what is called a $Q$ function.</p>
+:ET

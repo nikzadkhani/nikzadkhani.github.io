@@ -3,6 +3,7 @@ layout: page
 title: Spotify AR
 description: An android app using the Spotify API and AR features to make a dancing android mascot
 img: /assets/img/spotify_ar.png
+redirect: https://github.com/nikzadkhani/SpotifyAR
 importance: 3
 category: fun
 ---
