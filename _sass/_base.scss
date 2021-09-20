@@ -4,12 +4,24 @@
 
 // Typography
 
-p, h1, h2, h3, h4, h5, h6, em, div, span, strong {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+div,
+span,
+strong {
   color: var(--global-text-color);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-a, table.table a {
+a,
+table.table a {
   color: var(--global-theme-color);
   &:hover {
     color: var(--global-theme-color);
@@ -45,7 +57,8 @@ blockquote {
 }
 
 // Citation
-.citation, .citation-number {
+.citation,
+.citation-number {
   color: var(--global-theme-color);
 }
 
@@ -70,7 +83,9 @@ blockquote {
   .profile {
     width: 30%;
     .address {
-      p { display: block; }
+      p {
+        display: block;
+      }
     }
   }
 }
@@ -86,7 +101,6 @@ blockquote {
     }
   }
 }
-
 
 // Navbar customization
 
@@ -111,10 +125,10 @@ blockquote {
 }
 .dropdown-item {
   color: var(--global-text-color);
-    &:hover {
-      color: var(--global-hover-color);
-      background-color: var(--global-bg-color);
-    }
+  &:hover {
+    color: var(--global-hover-color);
+    background-color: var(--global-bg-color);
+  }
 }
 .navbar.navbar-light {
   a {
@@ -131,13 +145,13 @@ blockquote {
       color: var(--global-hover-color);
     }
   }
-  .navbar-nav .nav-item.active>.nav-link {
-      background-color: inherit;
-      font-weight: bolder;
-      color: var(--global-theme-color);
-      &:hover {
-        color: var(--global-hover-color);
-      }
+  .navbar-nav .nav-item.active > .nav-link {
+    background-color: inherit;
+    font-weight: bolder;
+    color: var(--global-theme-color);
+    &:hover {
+      color: var(--global-hover-color);
+    }
   }
   .navbar-brand.social {
     padding-bottom: 0;
@@ -192,7 +206,6 @@ blockquote {
   }
 }
 
-
 // News
 
 .news table td {
@@ -227,7 +240,6 @@ blockquote {
   }
 }
 
-
 // Footer
 footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
@@ -252,7 +264,6 @@ footer.sticky-bottom {
   padding-bottom: 40px;
   font-size: 0.9rem;
 }
-
 
 // Blog
 
@@ -309,7 +320,6 @@ footer.sticky-bottom {
   }
 }
 
-
 // Distill
 
 .distill {
@@ -318,7 +328,6 @@ footer.sticky-bottom {
     text-decoration: none;
   }
 }
-
 
 // Projects
 
@@ -346,7 +355,6 @@ footer.sticky-bottom {
     background: var(--global-code-bg-color);
   }
 
-
   .card-item {
     width: auto;
     margin-bottom: 10px;
@@ -371,7 +379,6 @@ footer.sticky-bottom {
     text-align: right;
   }
 }
-
 
 // Publications
 
@@ -432,8 +439,8 @@ footer.sticky-bottom {
         a {
           border-bottom: 1px dashed var(--global-theme-color);
           &:hover {
-              border-bottom-style: solid;
-              text-decoration: none;
+            border-bottom-style: solid;
+            text-decoration: none;
           }
         }
         > em {
@@ -504,7 +511,8 @@ pre {
   background-color: var(--global-code-bg-color);
   border-radius: 6px;
   padding: 6px 12px;
-  pre, code {
+  pre,
+  code {
     background-color: transparent;
     border-radius: 0;
     padding: 0;
@@ -518,7 +526,6 @@ code {
   padding: 3px 3px;
 }
 
-
 // Transitioning Themes
 html.transition,
 html.transition *,
@@ -526,4 +533,120 @@ html.transition *:before,
 html.transition *:after {
   transition: all 750ms !important;
   transition-delay: 0 !important;
+}
+
+// Anagrams
+$char-w: 1ch;
+$gap: 0.5 * $char-w;
+$n-char: 7;
+$in-w: $n-char * ($char-w + $gap);
+
+.anagram-input {
+  display: block;
+  margin: 2em auto;
+  border: none;
+  padding: 0;
+  width: $in-w;
+  background: repeating-linear-gradient(
+      90deg,
+      var(--global-theme-color) 0,
+      var(--global-theme-color) $char-w,
+      transparent 0,
+      transparent $char-w + $gap
+    )
+    0 100% / #{$in-w - $gap} 2px no-repeat;
+  color: var(--global-text-color);
+  font: 5ch menlo, droid sans mono, consolas, monospace;
+  letter-spacing: $gap;
+
+  &:focus {
+    outline: none;
+    color: var(--global-theme-color);
+  }
+}
+
+.anagrams-table table tr {
+  font-size: 1rem;
+  color: var(--global-text-color);
+  &:hover {
+    color: var(--global-theme-color);
+  }
+}
+
+.anagrams-table table th {
+  color: var(--global-text-color);
+}
+
+// From streamlit
+.anagrams-btn {
+  -webkit-appearance: none;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  background-color: rgb(19, 23, 32);
+  border-bottom-color: rgba(250, 250, 250, 0.2);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-image-outset: 0px;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border-left-color: rgba(250, 250, 250, 0.2);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: rgba(250, 250, 250, 0.2);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: rgba(250, 250, 250, 0.2);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  box-sizing: border-box;
+  color: rgb(250, 250, 250);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+
+  &:hover {
+    -webkit-appearance: none;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    align-items: center;
+    background-color: rgb(19, 23, 32);
+    border-bottom-color: rgb(246, 51, 102);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(246, 51, 102);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: rgb(246, 51, 102);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: rgb(246, 51, 102);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-sizing: border-box;
+    color: rgb(246, 51, 102);
+  }
+}
+
+.alert-danger {
+  background: rgba(255, 75, 75, 0.3);
+  border: 1px solid rgba(255, 75, 75, 1);
+  color: rgb(255, 75, 75);
 }

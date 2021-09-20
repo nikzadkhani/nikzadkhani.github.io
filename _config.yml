@@ -10,7 +10,10 @@ email: nikzad@bu.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Nikzad Khani's personal website including his projects, publications and a blog.
 footer_text: >
+<<<<<<< Updated upstream
   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> 
+=======
+>>>>>>> Stashed changes
 
 icon: 🖥️ # the emoji used as the favicon
 url: "" # the base hostname & protocol for your site
