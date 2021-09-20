@@ -185,31 +185,39 @@ String.prototype.isAlpha = function() {
   var regExp = /^[A-Za-z]+$/;
   return (this.match(regExp));
 };
+let DROPBOX_ENDPOINT = "https://content.dropboxapi.com/2/files/download"
 
-let dictionaryId = "1oGDf1wjWp5RF_X9C7HoedhIWMh5uJs8s"
-let apiKey = "AIzaSyDo-FawZoPg13Q1X_bH788_ZNNeCi-AQHM"
+function getAuthTOken
 
-function get_doc(id, apiKey){
-    const url = 'https://www.googleapis.com/drive/v3/files/'+id+'?key='+ 
-    apiKey +'?alt=media'
+
+
+function getDictionary(authToken){
+    if(self.fetch){
+        var setHeaders = new Headers();
+        setHeaders.append('Authorization', 'Bearer ' + authToken.access_token);
+        setHeaders.append('Content-Type', mime);
 
     var setOptions = {
-        method: 'GET'
+        method: 'POST',
+        headers: setHeaders
     };
-    fetch(url,setOptions).then(response => { if(response.ok){
+    fetch(url,setOptions)
+        .then(response => { if(response.ok){
         var reader = response.body.getReader();
         var decoder = new TextDecoder();
-        reader.read().then(result => {
+        reader.read().then(function(result){
             var data = {}
             data = decoder.decode(result.value, {stream: !result.done});
             console.log(data);
     });
-    } else {
-        console.log("Response was not ok :(");
+        }
+    else{
+        console.log("Response wast not ok");
     }
-  }) .catch(error => {
+  })  .catch(error => {
         console.log("There is an error " + error.message);
         });
+    }
 }
 get_doc(dictionaryId, apiKey)
 
@@ -346,7 +354,8 @@ Poo Poo
 <footer class="sticky-bottom mt-5">
   <div class="container">
     &copy; Copyright 2021 Nikzad  Khani.
-    
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> 
+
     
     
     Last updated: September 20, 2021.
