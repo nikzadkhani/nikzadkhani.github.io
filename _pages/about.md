@@ -7,8 +7,8 @@ things_i_like: [machine learning, to learn, to make data beautiful, to teach]
 
 profile:
   align: right
-  image: prof_pic.jpeg
-  alt: Nikzad Jpeg
+  image: prof_pic_small.webp
+  alt: Nikzad Picture
   address:
 
 news: true # includes a list of news items

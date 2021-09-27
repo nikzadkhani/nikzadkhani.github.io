@@ -2,7 +2,7 @@
 layout: page
 title: Anagrams Solver
 description: A program to help you beat your friends at anagrams with python
-img: /assets/img/anagrams.jpeg
+img: /assets/img/anagrams.webp
 redirect: https://github.com/nikzadkhani/Anagram-Solver
 importance: 5
 category: fun
@@ -13,9 +13,6 @@ String.prototype.isAlpha = function() {
   var regExp = /^[A-Za-z]+$/;
   return (this.match(regExp));
 };
-let DROPBOX_ENDPOINT = "https://content.dropboxapi.com/2/files/download"
-
-function getAuthTOken
 
 
 
