@@ -120,7 +120,7 @@ blockquote {
 
     &__list {
       margin-top: 0;
-      padding-left: 40px;
+      padding-left: 38px;
       text-align: left;
       list-style: none;
 
@@ -428,6 +428,9 @@ blockquote {
 }
 
 // News
+.news {
+  padding-top: 5%;
+}
 
 .news table td {
   font-size: 1rem;
@@ -442,6 +445,7 @@ blockquote {
 
 .social {
   text-align: center;
+  padding-top: 5%;
   .contact-icons {
     font-size: 4rem;
     a {
@@ -798,6 +802,25 @@ $in-w: $n-char * ($char-w + $gap);
   color: var(--global-text-color);
 }
 
+.st-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--global-bg-color);
+  color: var(--global-text-color);
+  padding: 0.25rem 0.75rem;
+  position: relative;
+  text-decoration: none;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--global-code-bg-color);
+  border-image: initial;
+  &:hover {
+    color: var(--global-hover-color);
+    border-color: var(--global-hover-color);
+  }
+}
 // From streamlit
 .anagrams-btn {
   -webkit-appearance: none;
@@ -870,4 +893,124 @@ $in-w: $n-char * ($char-w + $gap);
   background: rgba(255, 75, 75, 0.3);
   border: 1px solid rgba(255, 75, 75, 1);
   color: rgb(255, 75, 75);
+}
+
+// Email Form
+#fs-frm input,
+#fs-frm select,
+#fs-frm textarea,
+#fs-frm fieldset,
+#fs-frm optgroup,
+#fs-frm label,
+#fs-frm #card-element:disabled {
+  font-family: inherit;
+  font-size: 100%;
+  color: inherit;
+  border: none;
+  border-radius: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+#fs-frm label,
+#fs-frm legend,
+#fs-frm ::placeholder {
+  margin-bottom: 0.5rem;
+  padding-top: 0.2rem;
+  display: flex;
+  align-items: baseline;
+}
+
+/* border, padding, margin, width */
+#fs-frm input,
+#fs-frm select,
+#fs-frm textarea,
+#fs-frm #card-element {
+  border: 1px solid var(--global-code-bg-color);
+  border-radius: 4px;
+  background-color: var(--global-bg-color);
+  padding: 0.75em 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#fs-frm input:focus,
+#fs-frm select:focus,
+#fs-frm textarea:focus {
+  box-shadow: 0 0 0 1px var(--global-hover-color);
+  outline: none;
+}
+#fs-frm input:hover,
+#fs-frm select:hover,
+#fs-frm textarea:hover {
+  box-shadow: 0 0 0 1px var(--global-hover-color);
+}
+
+#fs-frm [type="text"],
+#fs-frm [type="email"] {
+  width: 100%;
+}
+
+#fs-frm [type="button"],
+#fs-frm [type="submit"],
+#fs-frm [type="reset"] {
+  width: auto;
+  cursor: pointer;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+#fs-frm [type="button"]:focus,
+#fs-frm [type="submit"]:focus,
+#fs-frm [type="reset"]:focus {
+  outline: none;
+}
+
+#fs-frm [type="submit"],
+#fs-frm [type="reset"] {
+  margin-bottom: 0;
+}
+
+#fs-frm select {
+  text-transform: none;
+}
+
+#fs-frm [type="checkbox"] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  appearance: checkbox;
+  display: inline-block;
+  width: auto;
+  margin: 0 0.5em 0 0 !important;
+}
+
+#fs-frm [type="radio"] {
+  -webkit-appearance: radio;
+  -moz-appearance: radio;
+  appearance: radio;
+}
+
+/* address, locale */
+#fs-frm fieldset.locale input[name="city"],
+#fs-frm fieldset.locale select[name="state"],
+#fs-frm fieldset.locale input[name="postal-code"] {
+  display: inline;
+}
+
+#fs-frm fieldset.locale input[name="city"] {
+  width: 52%;
+}
+
+#fs-frm fieldset.locale select[name="state"],
+#fs-frm fieldset.locale input[name="postal-code"] {
+  width: 20%;
+}
+
+#fs-frm fieldset.locale input[name="city"],
+#fs-frm fieldset.locale select[name="state"] {
+  margin-right: 3%;
 }
